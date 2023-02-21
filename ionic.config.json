@@ -1,0 +1,7 @@
+{
+  "name": "videosapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
