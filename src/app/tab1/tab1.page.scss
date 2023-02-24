@@ -4,6 +4,7 @@ ion-item{
   --inner-padding-end: 10px;
 
   ion-thumbnail{
+    --border-radius: 25% 10%;
    // height: 100%;
     margin-inline-end: 10px;
   }
