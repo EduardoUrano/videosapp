@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
-    <ion-title>
-      Juliano
-    </ion-title>
+    <ion-title> Juliano </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
-  <ion-searchbar placeholder="Buscar Sala">
+  <ion-searchbar placeholder="Buscar Sala"> </ion-searchbar>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img
+          alt="Silhouette of mountains"
+          src="https://habitatautomacao.com.br/wp-content/uploads/2021/07/thumbs-case10.png"
+        />
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        <div>
+          <h1>Reunião Master</h1>
+          <p>Horário de funcionamento 8:00AM - 17:00PM</p>
+          <p>Projetor, microfone e gravação</p>
+        </div>
+      </ion-label>
 
+      <ion-chip color="success" outline="true">
 
-  </ion-searchbar>
+        <ion-label>76%</ion-label>
 
+      </ion-chip>
 
-
+    </ion-item>
+  </ion-list>
 </ion-content>
