@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+
+
+
+    <ion-title>Dados Salas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+
+  <ion-card>
+    <ion-card-header>
+      <img [src]="Salas.foto">
+    </ion-card-header>
+
+    <ion-card-content>
+      <h1>{{Salas.nome}}</h1>
+      <p>{{Salas.equipamentos}}</p>
+
+    </ion-card-content>
+    <ion-item>
+      <ion-badge>{{Salas.horario}}</ion-badge>
+      <ion-chip color="success">{{Salas.ocupacao}}%</ion-chip>
+
+    </ion-item>
+  </ion-card>
+
+
+
+</ion-content>

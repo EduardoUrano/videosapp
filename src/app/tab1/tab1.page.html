@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
-    <ion-title> Juliano </ion-title>
+    <ion-title> {{ titulo }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,26 +8,26 @@
   <ion-searchbar placeholder="Buscar Sala"> </ion-searchbar>
   <ion-list>
    <!--  //primeiro item da lista -->
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let Salas of listasalas">
 
-    <ion-item lines="full">
+    <ion-item lines="full" (click)="exibirSala(Salas)">
       <ion-thumbnail slot="start">
         <img
-          alt="Silhouette of mountains"
-          src="https://habitatautomacao.com.br/wp-content/uploads/2021/07/thumbs-case10.png"
+        alt="Silhouette of mountains"
+          [src]="Salas.foto"
         />
       </ion-thumbnail>
       <ion-label class="ion-text-wrap">
         <div>
-          <h1>Reunião Master</h1>
-          <p>Horário de funcionamento 8:00AM - 17:00PM</p>
-          <p>Projetor, microfone e gravação</p>
+          <h1>{{Salas.nome}}</h1>
+          <p>{{Salas.horario}}</p>
+          <p>{{Salas.equipamentos}}</p>
         </div>
       </ion-label>
 
       <ion-chip color="success" outline="true">
 
-        <ion-label>76%</ion-label>
+        <ion-label color="success">{{Salas.ocupacao}}%</ion-label>
 
       </ion-chip>
 
@@ -44,42 +44,7 @@
 
     </ion-item-options>
   </ion-item-sliding>
-<!-- //segundo item da lista -->
-  <ion-item-sliding>
 
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img
-          alt="Silhouette of a person's head"
-          src="https://habitatautomacao.com.br/wp-content/uploads/2021/12/thumbs-destaques08-390x240.jpg"
-        />
-      </ion-thumbnail>
-      <ion-label class="ion-text-wrap">
-        <div>
-          <h1>Reunião Conferência</h1>
-          <p>Horário de funcionamento 8:00AM - 17:00PM</p>
-          <p>TV, SOM, Video Conferência</p>
-        </div>
-      </ion-label>
 
-      <ion-chip color="success" outline="true">
-
-        <ion-label>42%</ion-label>
-
-      </ion-chip>
-
-    </ion-item>
-
-    <ion-item-options side="end">
-      <ion-item-option>
-        <ion-icon slot="start" name="calendar-outline"></ion-icon>
-        Agendar
-      </ion-item-option>
-      <ion-item-option color="danger"  (click)="exibirDeletarSala()">
-        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
-      </ion-item-option>
-
-    </ion-item-options>
-  </ion-item-sliding>
   </ion-list>
 </ion-content>
